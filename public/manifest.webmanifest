@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "Nature Event",
+  "short_name": "Nature Event",
+  "description": "Discover and join local environmental events.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5faf2",
+  "theme_color": "#21663b",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

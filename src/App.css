@@ -1,0 +1,557 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7faf5;
+  color: #243126;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  width: 100%;
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid #e1eadf;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 22px;
+  font-weight: 700;
+  color: #245c3a;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  color: #526354;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #245c3a;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-button,
+.register-button {
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.login-button {
+  border: 1px solid #c8d9c6;
+  background: white;
+  color: #245c3a;
+}
+
+.login-button:hover {
+  background: #edf5eb;
+}
+
+.register-button {
+  border: none;
+  background: #245c3a;
+  color: white;
+}
+
+.register-button:hover {
+  background: #1b472d;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 650px;
+  padding: 80px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(122, 170, 112, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f7faf5 0%,
+      #eef6ea 100%
+    );
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-label {
+  margin-bottom: 22px;
+
+  color: #4f8a4c;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: #1f3024;
+}
+
+.hero h1 span {
+  color: #4f8a4c;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin-top: 25px;
+
+  color: #657466;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 14px 25px;
+
+  border-radius: 28px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.primary-button {
+  border: none;
+  background: #245c3a;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #1b472d;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid #a9c2a5;
+  background: white;
+  color: #245c3a;
+}
+
+.secondary-button:hover {
+  background: #edf5eb;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.hero-visual {
+  width: 420px;
+  height: 420px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nature-circle {
+  width: 330px;
+  height: 330px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 150px;
+
+  background:
+    radial-gradient(
+      circle,
+      #dcefd5 0%,
+      #b8d8ad 55%,
+      #8fbd82 100%
+    );
+
+  box-shadow:
+    0 30px 60px rgba(49, 94, 48, 0.18);
+}
+
+.floating-card {
+  position: absolute;
+
+  padding: 14px 20px;
+
+  background: white;
+  border: 1px solid #e0e9dc;
+  border-radius: 16px;
+
+  box-shadow:
+    0 12px 30px rgba(36, 92, 58, 0.12);
+
+  color: #38523c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card-one {
+  top: 35px;
+  right: -10px;
+}
+
+.card-two {
+  bottom: 45px;
+  left: -20px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+  padding: 100px 7%;
+  text-align: center;
+
+  background: white;
+}
+
+.section-label {
+  margin-bottom: 15px;
+
+  color: #4f8a4c;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.intro h2 {
+  color: #243126;
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.2;
+}
+
+.intro > p:last-child {
+  max-width: 700px;
+  margin: 25px auto 0;
+
+  color: #6b786c;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CATEGORIES
+   ========================================================= */
+
+.categories {
+  padding: 80px 7% 100px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  background: #f7faf5;
+}
+
+.category-card {
+  padding: 35px;
+
+  background: white;
+
+  border: 1px solid #e1eadf;
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 30px rgba(36, 92, 58, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(36, 92, 58, 0.12);
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 18px;
+
+  background: #edf5eb;
+
+  font-size: 30px;
+}
+
+.category-card h3 {
+  margin-bottom: 10px;
+
+  color: #29422f;
+  font-size: 21px;
+}
+
+.category-card p {
+  color: #718073;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 50px 7%;
+
+  text-align: center;
+
+  background: #193b26;
+  color: white;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+footer p {
+  margin-top: 12px;
+  color: #c5d7c7;
+}
+
+footer .copyright {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #91ad96;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 5%;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: 350px;
+    height: 350px;
+  }
+
+  .nature-circle {
+    width: 270px;
+    height: 270px;
+
+    font-size: 120px;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 68px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .logo-icon {
+    font-size: 24px;
+  }
+
+  .login-button {
+    display: none;
+  }
+
+  .register-button {
+    padding: 9px 16px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-visual {
+    width: 300px;
+    height: 300px;
+  }
+
+  .nature-circle {
+    width: 230px;
+    height: 230px;
+    font-size: 100px;
+  }
+
+  .card-one {
+    right: -5px;
+  }
+
+  .card-two {
+    left: -5px;
+  }
+
+  .intro {
+    padding: 75px 5%;
+  }
+
+  .intro h2 {
+    font-size: 34px;
+  }
+
+  .category-card {
+    padding: 28px;
+  }
+}
