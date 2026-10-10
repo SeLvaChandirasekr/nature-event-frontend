@@ -759,16 +759,19 @@ footer .copyright {
 
 }
 
+.nav-actions {
+  gap: 8px;
+}
+
 .login-button {
-
-  display: none;
-
+  display: inline-flex;
+  padding: 8px 14px;
+  font-size: 13px;
 }
 
 .register-button {
-
-  padding: 9px 16px;
-
+  padding: 8px 14px;
+  font-size: 13px;
 }
 
 .hero {
